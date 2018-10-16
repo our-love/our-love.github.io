@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<embed src="C:\Users\Administrator\Downloads\lovelife\music\往后余生-王贰浪.mp3" autostart="true" controls="controls loop="true" hidden="true"></embed>-->
+	<audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+         src="http://mp3.05935w.com/mp3/2018-10-13/1539440121.mp3">
+	</audio>
+
+<title>-private for 湘回-</title>
+	
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/baguettebox.min.css">
+<script src="js/baguettebox.min.js"></script>
+
+<link rel="stylesheet" href="css/menustyle.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+</head>
+
+<body>
+
+<div class="baguetteBoxOne gallery">
+       <a href="img/1.jpg" data-caption="..."><img src="img/pic01.jpg"></a>
+        <a href="img/2.jpg" title="..."><img src="img/pic02.jpg"></a>
+        <a href="img/3.jpg" data-caption="..."><img src="img/pic03.jpg"></a>
+        <a href="img/4.jpg" data-caption="..."><img src="img/pic04.jpg"></a>
+        <a href="img/8.jpg" data-caption="..."><img src="img/pic08.jpg"></a>
+        <a href="img/9.jpg" data-caption="..."><img src="img/pic09.jpg"></a>
+        <a href="img/10.jpg" data-caption="..."><img src="img/pic10.jpg"></a>
+        <a href="img/11.jpg" data-caption="..."><img src="img/pic11.jpg"></a>
+</div>
+<script>
+baguetteBox.run('.baguetteBoxOne', {
+    animation: 'fadeIn',
+});
+</script>
+	<!--div class="container">			
+			<img src="img/1.jpg" 	class="pic1"  />
+			<img src="img/2.jpg" 	class="pic2"  />
+			<img src="img/3.jpg" 	class="pic3"  />
+			<img src="img/4.jpg" 	class="pic4"  />
+			<img src="img/5.jpg" 	class="pic5"  />
+			<img src="img/6.jpg" 	class="pic6"  />
+			<img src="img/7.jpg" 	class="pic7"  />
+			<img src="img/8.jpg" 	class="pic8"  />
+			<img src="img/9.jpg" 	class="pic9"  />
+			<img src="img/10.jpg" 	class="pic10" />
+			
+	</div-->
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="keyword">往后余生</span><br />
+			<span class="comments">风雪是你</span><br />
+			<span class="comments">平淡是你</span> <span class="comments">清贫也是你<br />
+			<span class="comments">荣华是你</span><br />
+			<span class="comments">心底温柔是你</span><br />
+			<span class="comments">目光所致</span><br />
+			<span class="comments">也是你</span><br />
+			<span class="comments">想带你去看晴空万里</span><br />
+			<span class="comments">想大声告诉你我为你着迷</span><br />
+			<span class="comments">往事匆匆</span><br />
+			<span class="comments">你总是会感动</span><br />
+			<span class="comments">往后余生</span><br />
+			<span class="comments">我只要你</span> <span class="comments">往后余生 <span class="comments">风雪是你</span><br />
+			<span class="comments">春华是你</span> <span class="comments">夏雨也是你 <span class="comments">秋黄是你</span><br />
+			<span class="comments">四季冷暖是你</span><br />
+			<span class="comments">目光所致</span><br />
+			<span class="keyword">都是你</span><br />
+			<br>
+			<br>
+			I love you 湘回<br />
+			forever!<br />
+		</div>
+		<div id="loveHeart">
+		    <canvas id="garden"></canvas>
+			<div id="words">
+			    <div id="messages">
+				这是我们在一起的幸福时光。
+				<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+				    爱你直到永远<br/>
+				    <div class="signature">- 杜斌</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#"></a><br />
+		<a href="#"></a><br />
+		
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2018, 07, 05);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+
+</script>
+
+<ul id="navigation">
+	<li class="about"><a href="message.html" title="Message"></a></li>
+	<!--
+	<li class="home"><a href="" title="Home"></a></li>
+	<li class="search"><a href="" title="Search"></a></li>
+	<li class="photos"><a href="" title="Photos"></a></li>
+	<li class="rssfeed"><a href="" title="Rss Feed"></a></li>
+	<li class="podcasts"><a href="" title="Podcasts"></a></li>
+	<li class="contact"><a href="" title="Contact"></a></li>
+	//-->
+</ul>
+
+<div style="height:1200px;"></div>
+
+<script type="text/javascript">
+$(function() {
+	$('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
+
+	$('#navigation > li').hover(
+		function () {
+			$('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+		},
+		function () {
+			$('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
+		}
+	);
+});
+</script>
+
+</body>
+</html>
